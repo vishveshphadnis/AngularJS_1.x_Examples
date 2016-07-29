@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<style>
+	</style>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script>
+		angular.module("angularBinding",[]);
+		angular.module("angularBinding").
+			controller("angularBindingController",
+			function($scope){
+				debugger;
+				$scope.elementValue = '{{variable}} '
+			}
+		);
+	</script> 
+  </head>
+  <body ng-app="angularBinding">
+    <div ng-controller="angularBindingController"   >
+		<div>
+		<div><span class="w3-tag w3-teal"> Element Binding with Angular JS using : <h4 style="display:inline-block;"> <i> {{elementValue}} </i>	</h4> </span></div>
+		</div>
+		<br/>
+		<div ng-non-bindable><span class="w3-tag w3-blue"> Element binding excluded for Angular JS using <h3  style="display:inline-block;"><b> 'ng-non-bindable'</b></h3> directive like  <h3  style="display:inline-block;"><i> {{variable}} </i> </h3></span></div>
+    </div>
+  </body>
+</html>
